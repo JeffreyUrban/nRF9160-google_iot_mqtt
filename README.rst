@@ -47,6 +47,13 @@ Download cloud-side certs (primary and backup)
 
 - `backup <https://pki.goog/gsr4/GSR4.crt>`_
 
+Convert cloud-side certs from binary to text
+
+.. code-block:: bash
+
+  openssl x509 -inform DER -outform PEM -in gtsltsr.crt -out gtsltsr.pem
+  openssl x509 -inform DER -outform PEM -in GSR4.crt -out GSR4.pem
+
 NOTE: It is not necessary to change the certs to to ``"C-Style\n"`` formatting.
 
 Program the cloud-side certs:
